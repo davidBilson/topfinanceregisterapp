@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*, body {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    background: whitesmoke;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+.icons i{
+    margin-right: 15px;
+    color: green;
+    font-size: 1.2rem;
+}
+/* start login */
+.login-section {
+    max-width: 400px;
+    min-height: 200px;
+    background: whitesmoke;
+    margin: 100px auto;
+    /* text-align: center; */
+    box-shadow: 0px 0px 10px grey;
+    padding: 50px 50px;
+}
+.login-section header h1 {
+    font-weight: 600;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: dodgerblue;
+}
+.login-panel label {
+    color: grey;
+    font-size: 18px;
+}
+.login-panel a {
+    color: dodgerblue;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.inputs {
+    margin: 10px 0 30px 0;
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(235, 235, 235);
+}
+.inputs::placeholder {
+    padding:0 10px;
+}
+
+.loginBtn {
+    padding: 15px 50px;
+    width: 100%;
+    margin-bottom: 50px;
+    border: none;
+    background: dodgerblue;
+    color: whitesmoke;
+    font-size: 18px;
+    font-weight: 600;
+}
+/* end login & sign up*/
+
+/* dashboard  */
+.dashboard-header {
+    background: dodgerblue;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+.dashboard-header p {
+    font-size: 15px;
+    margin-bottom: 80px;
+}
+.power {
+    font-weight: 800;
+    color: rgb(148, 148, 148);
+}
+.google {
+    font-weight: 800;
+}
+.dashboard-header ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 400;
+}
+.dashboard-header ul li {
+    margin:5px 10px;
+    padding: 7px 10px;
+    background:rgb(0, 165, 74);
+    cursor: pointer;
+}
+.account {
+    padding: 20px;
+}
+.account-dashboard {
+    background: white;
+    padding: 10px;
+    max-width: 1300px;
+    margin: 50px auto;
+}
+.account-dashboard-first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.account-dashboard-second {
+    background: black;
+    color: rgb(224, 224, 224);
+    font-weight: 500;
+    font-size: 16px;
+    padding: 14px 10px;
+}
+.manager h2{
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(0, 0, 214);
+}
+
+table {
+    width: 100%;
+    background: rgb(145, 145, 145);
+    margin: 5px 0;
+}
+th,td {
+    padding:13px 7px;
+    text-align: center;
+    font-weight: 600;
+}
+td {
+    font-size: 16px;
+}
+th {
+    font-size: 16px;
+    background:paleturquoise;
+}
+.row1 td {
+    background: silver;
+}
+.row2 td {
+    background: whitesmoke;
+}
+.spaced {
+    margin-top: 150px;
+}
+.credit td{
+    background: rgb(44, 131, 44);
+}
+.debit td{
+    background: rgb(216, 78, 78);
+}
+.blue {
+    color: rgb(47, 117, 175);
+}
+.green {
+    color: rgb(44, 131, 44);
+}
+.red {
+    color: rgb(216, 78, 78);
+}
+/* end dashboard */
+/* footer */
+footer {
+    background: black;
+    padding: 40px 0px;
+    color: whitesmoke;
+    position: relative;
+    min-height: 200px;
+}
+.footer1 {   
+    max-width: 400px;
+    position: absolute;
+    right: 15%;
+    text-align: left;
+}
+.footer2 {
+    width: 100%;
+    text-align: center;
+    background: rgb(163, 178, 32);
+    padding: 30px 0;
+    position: absolute;
+    bottom: 0;
+}
+.footerBtn {
+    width: fit-content;
+    padding: 12px 30px;
+    border-radius: 3px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    background: rgb(46, 24, 187);
+    text-align: center;
+}
+.footerP {
+    color: grey;
+    font-weight: 300;
+}
+.payment-form {
+    max-width: 500px;
+    margin: 50px auto;
+    background: yellow;
+    padding: 30px;
+    display: none;
+}
+/* footer */
+
+@media (max-width:600px)
+ {
+     /* login and sign up */
+    .login-section {
+        max-width: 400px;
+        min-height: 200px;
+        background: whitesmoke;
+        margin: 100px auto;
+        /* text-align: center; */
+        box-shadow: 0px 0px 10px grey;
+        padding: 30px 20px;
+    }
+    /* end logi and sign up */
+
+    /* account */
+    .account {
+        overflow: scroll;
+    }
+    /* end account */
+}
