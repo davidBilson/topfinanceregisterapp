@@ -24,8 +24,8 @@ body {
     font-style: italic;
 }
 .nav h1 {
-
-background:green;
+text-align:center;
+background:crimson;
 margin:0 auto;
 }
 .icons i{
