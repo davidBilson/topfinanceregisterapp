@@ -7,15 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./scriptstyle.css">
     <title>TopFinanceStream - Customer Entry</title>
-    <style>
-        body {
-            padding: 0 20px;
-        }
-        @media (max-width:600px)
-        {
-        
-        }
-    </style>
 </head>
 <body>
     <section class="nav">
@@ -41,7 +32,7 @@
     </section>
     
 
-
+<a href="./dashboard.html">go to dashboard</a>
 
     <section class="login-section" id="loginUser">
         <header>
@@ -49,8 +40,8 @@
         </header>
         <div class="login-panel">
           
-                <label for="username">Username</label><br>
-                <input class="inputs" type="text" name="username" id="loginUser" placeholder="Enter username" required><br>
+            <label for="email">Email</label><br>
+            <input autocomplete="on" class="inputs" type="email" name="email" id="loginEmail" placeholder="janedoe@email.com" required><br>
                 <label for="password">Password</label><br>
                 <input class="inputs" type="password" name="password" id="loginPassword" placeholder="password" required><br>
                 <button class="loginBtn" >Login</button>
@@ -60,10 +51,11 @@
     </section>
     
     <script type="module">
+        // SIGN UP FIREBASE
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
         import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-database.js";
-        import { getAuth, createUserWithEmailAndPassword,  signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-auth.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-auth.js";
         // TODO: Add SDKs for Firebase products that you want to use
         // https://firebase.google.com/docs/web/setup#available-libraries
       
@@ -109,23 +101,88 @@
         });
 
         });
+      </script>
 
-         login.addEventListener('click', (e)=>{
+<script type="module">
+    // LOGIN FIREBASE
+    // Import the functions you need from the SDKs you need
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
+    import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyARCd056AfMuUn67jWiHCTQUzf2eVPCqfM",
+      authDomain: "signuptopfinance.firebaseapp.com",
+      databaseURL: "https://signuptopfinance-default-rtdb.firebaseio.com",
+      projectId: "signuptopfinance",
+      storageBucket: "signuptopfinance.appspot.com",
+      messagingSenderId: "251085703386",
+      appId: "1:251085703386:web:a7fd3bdf55122c591bbde3"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth = getAuth();
+
+    login.addEventListener('click', (e)=>{
+            let email = document.getElementById('loginEmail').value;
+            let password = document.getElementById('loginPassword').value;
 
             signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
+
+            const dt = new Date();
+            update(ref(database, 'users/' + user.uid), {
+            last_login:dt
+            })
+            alert('user logged in')
             // ...
             })
             .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
+            // alert(errorMessage);
             });
-
-
          });
-      </script>
+
+         import { getAuth, onAuthStateChanged } from "firebase/auth";
+
+         const user = auth.currentUser;
+        onAuthStateChanged(auth, (user) => {
+        if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/firebase.User
+        const uid = user.uid;
+        // get currently signed in user
+        // ...
+        } else {
+        // User is signed out
+        // ...
+        // make changes after user log in
+        }
+        });
+
+        // log out user
+        logout.addEventListener('click', (e) => {
+
+        signOut(auth).then(() => {
+        // Sign-out successful.
+        alert('sign out succesful')
+        }).catch((error) => {
+        // An error happened.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        });
+
+    })
+  </script>
     <script src="./app.js"></script>
 </body>
 </html>
