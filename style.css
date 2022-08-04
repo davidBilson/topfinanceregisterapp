@@ -13,6 +13,15 @@ body {
     margin: 0;
     user-select: none;
 }
+nav {
+    width: 100%;
+    text-align: center;
+    padding: 40px 20px;
+    font-weight: 900;
+    font-size: 18px;
+    border-bottom: 2px solid silver;
+    font-style: italic;
+}
 .icons i{
     margin-right: 15px;
     color: green;
@@ -23,21 +32,23 @@ body {
     max-width: 400px;
     min-height: 200px;
     background: whitesmoke;
-    margin: 100px auto;
+    margin: 80px auto;
     /* text-align: center; */
     box-shadow: 0px 0px 10px grey;
     padding: 50px 50px;
 }
 .login-section header h1 {
     font-weight: 600;
-    font-size: 40px;
+    font-size: 30px;
+    padding: 20px 0;
     text-align: center;
     margin-bottom: 30px;
-    color: dodgerblue;
+    background: dimgray;
+    color: white;
 }
 .login-panel label {
     color: grey;
-    font-size: 18px;
+    font-size: 16px;
 }
 .login-panel a {
     color: dodgerblue;
@@ -47,20 +58,18 @@ body {
     justify-content: center;
 }
 .inputs {
-    margin: 10px 0 30px 0;
-    width: 100%;
+    margin: 5px 0 30px 0;
+    width: 90%;
+    padding: 8px;
     height: 40px;
     border: none;
     outline: none;
     border-bottom: 2px solid rgb(235, 235, 235);
 }
-.inputs::placeholder {
-    padding:0 10px;
-}
 
 .loginBtn {
     padding: 15px 50px;
-    width: 100%;
+    width: 95%;
     margin-bottom: 50px;
     border: none;
     background: dodgerblue;

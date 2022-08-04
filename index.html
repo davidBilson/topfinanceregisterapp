@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Sign Up</title>
+    <link rel="stylesheet" href="./scriptstyle.css">
+    <title>TopFinanceStream - Customer Entry</title>
     <style>
         body {
             padding: 0 20px;
@@ -17,7 +18,11 @@
     </style>
 </head>
 <body>
-    <section class="login-section">
+    <nav>
+        <h1>TopFinance<span style="color: dodgerblue;">Stream</span></h1>
+    </nav>
+    <h1></h1>
+    <section class="login-section" id="register">
         <header>
             <h1>Sign Up</h1>
         </header>
@@ -31,16 +36,34 @@
                 <input autocomplete="on" class="inputs" type="password" name="password" id="ppassword" placeholder="password" required><br>
                 <button class="loginBtn" id="signUp">Sign Up</button>
             
-            <a href="./login.html">Already have an account yet? Login here</a>
+            <a id="loginBtn" >Already have an account yet? Login here</a>
         </div>
     </section>
     
+
+
+
+    <section class="login-section" id="loginUser">
+        <header>
+            <h1>Login</h1>
+        </header>
+        <div class="login-panel">
+          
+                <label for="username">Username</label><br>
+                <input class="inputs" type="text" name="username" id="loginUser" placeholder="Enter username" required><br>
+                <label for="password">Password</label><br>
+                <input class="inputs" type="password" name="password" id="loginPassword" placeholder="password" required><br>
+                <button class="loginBtn" >Login</button>
+           
+            <a id="registerBtn">Don't have an account? Create account</a>
+        </div>
+    </section>
     
     <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
-        import { getDatabase } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-database.js";
-        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-auth.js";
+        import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword,  signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-auth.js";
         // TODO: Add SDKs for Firebase products that you want to use
         // https://firebase.google.com/docs/web/setup#available-libraries
       
@@ -70,6 +93,10 @@
         .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
+        set(ref(database, 'users/' + user.uid), {
+            username:username,
+            email:email
+        })
         alert('user created');
         // ...
         })
@@ -81,7 +108,23 @@
         // ..
         });
 
-        })
+        });
+
+         login.addEventListener('click', (e)=>{
+
+            signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+            // Signed in 
+            const user = userCredential.user;
+            // ...
+            })
+            .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            });
+
+
+         });
       </script>
     <script src="./app.js"></script>
 </body>
