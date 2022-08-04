@@ -248,7 +248,7 @@ footer {
 
      /* login and sign up */
     .login-section {
-        max-width: 400px;
+        max-width: 80%;
         min-height: 200px;
         background: whitesmoke;
         margin: 60px auto;
