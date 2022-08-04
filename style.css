@@ -28,6 +28,9 @@ align-items:center;
     border-bottom: 2px solid silver;
     font-style: italic;
 }
+.nav h1 {
+background:red;
+}
 .icons i{
     margin-right: 15px;
     color: green;
