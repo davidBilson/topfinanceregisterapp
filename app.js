@@ -5,10 +5,10 @@ let loginBtn = document.getElementById('loginBtn');
 
 register.style.display = 'none';
 
-registerBtn.addEventListener('click', function() {
-    login.style.display = 'none';
-    register.style.display = 'block';
-});
+// registerBtn.addEventListener('click', function() {
+//     login.style.display = 'none';
+//     register.style.display = 'block';
+// });
 
 loginBtn.addEventListener('click', function() {
     register.style.display = 'none';

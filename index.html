@@ -35,6 +35,7 @@
         <header>
             <h1>Login</h1>
         </header>
+        <p id="success"></p>
         <div class="login-panel">
           
             <label for="email">Email</label><br>
@@ -139,7 +140,9 @@
             update(ref(database, 'users/' + user.uid), {
             last_login:dt
             })
-            alert('user logged in')
+            // alert('user logged in');
+            document.getElementById('success').textContent = 'Login Successful';
+            window.location.href = 'https://www.topfinancestream.com/dashboard.html';
             // ...
             })
             .catch((error) => {
@@ -149,36 +152,36 @@
             });
          });
 
-         import { getAuth, onAuthStateChanged } from "firebase/auth";
+    //      import { getAuth, onAuthStateChanged } from "firebase/auth";
 
-         const user = auth.currentUser;
-        onAuthStateChanged(auth, (user) => {
-        if (user) {
-        // User is signed in, see docs for a list of available properties
-        // https://firebase.google.com/docs/reference/js/firebase.User
-        const uid = user.uid;
-        // get currently signed in user
-        // ...
-        } else {
-        // User is signed out
-        // ...
-        // make changes after user log in
-        }
-        });
+    //      const user = auth.currentUser;
+    //     onAuthStateChanged(auth, (user) => {
+    //     if (user) {
+    //     // User is signed in, see docs for a list of available properties
+    //     // https://firebase.google.com/docs/reference/js/firebase.User
+    //     const uid = user.uid;
+    //     // get currently signed in user
+    //     // ...
+    //     } else {
+    //     // User is signed out
+    //     // ...
+    //     // make changes after user log in
+    //     }
+    //     });
 
-        // log out user
-        logout.addEventListener('click', (e) => {
+    //     // log out user
+    //     logout.addEventListener('click', (e) => {
 
-        signOut(auth).then(() => {
-        // Sign-out successful.
-        alert('sign out succesful')
-        }).catch((error) => {
-        // An error happened.
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        });
+    //     signOut(auth).then(() => {
+    //     // Sign-out successful.
+    //     alert('sign out succesful')
+    //     }).catch((error) => {
+    //     // An error happened.
+    //     const errorCode = error.code;
+    //     const errorMessage = error.message;
+    //     });
 
-    })
+    // })
   </script>
     <script src="./app.js"></script>
 </body>

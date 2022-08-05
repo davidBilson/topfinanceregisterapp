@@ -27,6 +27,12 @@ body {
 text-align:center;
 margin:0 auto;
 }
+#success {
+    color: rgb(0, 206, 0);
+    margin: 20px 0;
+    font-size: 14px;
+    font-weight: 900;
+}
 .icons i{
     margin-right: 15px;
     color: green;
@@ -239,11 +245,8 @@ footer {
  {
      /* nav */
      .nav {
-    
-
         font-weight: 900;
         font-size: 10px;
-   
         font-style: italic;
     }
      /* end nav */
