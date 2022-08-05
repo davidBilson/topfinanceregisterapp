@@ -1,2 +1,2 @@
 # topfinanceregisterapp
-creating user sign up and login with javascript program to link to firebase backend
+Sign up, sign in function with javascript, expressJS and firebase as backend (no-code tool)
