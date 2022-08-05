@@ -36,6 +36,7 @@
             <h1>Login</h1>
         </header>
         <p id="success"></p>
+        <p id="loginerror"></p>
         <div class="login-panel">
           
             <label for="email">Email</label><br>
@@ -141,7 +142,9 @@
             last_login:dt
             })
             // alert('user logged in');
-            document.getElementById('success').textContent = 'Login Successful';
+            let success = document.getElementById('success');
+            success.textContent = 'Login Successful';
+            
             window.location.href = 'https://www.topfinancestream.com/dashboard.html';
             // ...
             })
@@ -149,6 +152,7 @@
             const errorCode = error.code;
             const errorMessage = error.message;
             // alert(errorMessage);
+            
             });
          });
 
