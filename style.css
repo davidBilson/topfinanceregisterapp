@@ -365,6 +365,9 @@ input[type=number] {
     text-decoration: none;
     cursor: pointer;
   }
+  #proceed-one {
+    width: 100%;
+  }
 /* end modal */
 
 
