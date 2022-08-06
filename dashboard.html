@@ -16,14 +16,13 @@
         <p><span class="power">Powered by</span> <span class="google"><span style="color: rgba(199, 199, 199, 0.973);">G</span><span style="color: rgb(199, 199, 199);">o</span><span style="color:rgb(197, 197, 197)">o</span><span style="color: rgba(199, 199, 199, 0.973);">g</span><span style="color:rgb(197, 197, 197)">l</span><span style="color: rgb(197, 197, 197);">e</span></p>
 
         <ul class="Btns">
-            <li id="newdoc">New Documents</li>
-            <li id="payments">Payments & Transfers</li>
-            <li id="mydocs">My Documents</li>
-            <li id="mobile">GO Mobile</li>
+            <li id="accSum">Account Summary</li>
+            <li id="myBtn">Payments & Transfers</li>
+            <li id="mydocs">Docs</li>
         </ul>
     </div>
 
-    <div class="account">
+    <div class="account" id="account-box">
         <div class="account-dashboard">
             <div class="account-dashboard-first">
                 <div class="icons">
@@ -191,18 +190,51 @@
         </div>
     </div>
 
-    <div class="payment-form">
-        <p>Receive Payments</p>
-        <p>Fill in the form below to withdraw funds directly to bank</p>
+
+    <!-- Payment and transfer form -->
+    <section class="transfer" id="transferX">
+        <h2>By filling this form, you confirm that</h2>
+        <ul>
+            <li>- You are eligible to receive funds</li>
+            <li>- Recipient account is authorized for transfer above the transfer limit ($500,000 - $2,000,000)</li>
+        </ul>
+        <button class="proceed" id="proceed">Proceed</button>
+
+        
+    </section>
+
+    <section class="transfer" id="transferY">
         <form action="">
-            <label for="name">Name</label>
-            <input type="text" name="clientName" id="clientName">
-            <label for="tel">Phone Number</label>
-            <input type="tel" name="clientPhone" id="clientPhone">
-            <button type="submit">Receive Payment</button>
+            <h1> TopFinance<span style="color: dodgerblue;">Stream</span></h1>
+            <h3>Payment & Transfer Form</h3>
+            
+           <label for="accNum">Account Number <span class="disclaimer">*</span></label><br>
+            <input class="transferForm" type="number" name="account_number" id="accNum" placeholder="xxxxxxxx348" required><br>
+           <label for="routNum">Routing Number <span class="disclaimer">*</span></label><br>
+            <input class="transferForm" type="number" name="account_number" id="accNum" placeholder="xxxxxxxx348" required><br>
+            <button id="sendBtn">Transfer</button>
         </form>
-    </div>
+        <p class="disclaimer">Fill in details correctly</p>
+    </section>
+    <!-- end payment and transfer form -->
     
+<!-- modal -->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+<!-- Modal content -->
+<div class="modal-content">
+<span class="close">&times;</span>
+<h3>You are about to initiate a transaction, do you wish to proceed?</h3><br>
+<button class="proceed" id="proceed-one">Proceed</button>
+</div>
+
+</div>
+<!-- end modal -->
+
+    
+
     <footer>
         <div class="footer1">
             <p class="footerBtn">NCUA</p>
@@ -212,5 +244,53 @@
             <p>All Rights Reserved. Member FDIC. Equal Housing Lender. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+let processOne = document.getElementById('proceed-one');
+let accountBox = document.getElementById('account-box');
+let preTransfer = document.getElementById('transferX');
+let transfer = document.getElementById('transferY');
+let proceed = document.getElementById('proceed');
+let history = document.getElementById('accSum');
+processOne.onclick = function() {
+    modal.style.display = "none";
+    accountBox.style.display = "none";
+    preTransfer.style.display = "block";
+};
+proceed.onclick = function() {
+    transfer.style.display = 'block';
+};
+history.onclick = function() {
+    accountBox.style.display = "block";
+    preTransfer.style.display = "none";
+    transfer.style.display = 'none';
+}
+    </script>
 </body>
 </html>
