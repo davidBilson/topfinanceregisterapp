@@ -131,7 +131,7 @@ margin:0 auto;
     padding: 20px;
 }
 .account-dashboard {
-    background: white;
+    background: rgb(255, 0, 0);
     padding: 10px;
     max-width: 1300px;
     margin: 50px auto;
@@ -161,6 +161,7 @@ table {
     margin: 5px 0;
     border-collapse: separate;
     border-spacing: 0 5px;
+    
 }
 th,td {
     padding:13px 7px;
@@ -392,14 +393,13 @@ input[type=number] {
     /* end logi and sign up */
 
     /* account */
-    .account {
-        overflow: scroll;
-    }
+    
     .account-dashboard {
         background: white;
         padding: 10px;
         max-width: 1300px;
         margin: 50px auto;
+        overflow-x: scroll;
     }
     /* end account */
 
@@ -505,6 +505,21 @@ input[type=number] {
         width: 100%;
     }
 
+    .dashboard-header ul {
+        list-style: none;
+        display: inline-block;
+        
+        
+        align-items: center;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .dashboard-header ul li {
+        width: fit-content;
+        background:#003b65;
+        padding: 5px;
+        cursor: pointer;
+    }
 
 
 }
