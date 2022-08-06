@@ -7,7 +7,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
-    background: whitesmoke;
+    background: #eceff1;
     font-family: sans-serif;
     padding: 0;
     margin: 0;
@@ -35,14 +35,14 @@ margin:0 auto;
 }
 .icons i{
     margin-right: 15px;
-    color: green;
+    color: #003b65;
     font-size: 1.2rem;
 }
 /* start login */
 .login-section {
     max-width: 400px;
     min-height: 200px;
-    background: whitesmoke;
+    background: inherit;
     margin: 80px auto;
     /* text-align: center; */
     box-shadow: 0px 0px 10px grey;
@@ -92,8 +92,8 @@ margin:0 auto;
 
 /* dashboard  */
 .dashboard-header {
-    background: rgb(0, 98, 196);
-    color: white;
+    background: #003b65;
+    color: #eee;
     text-align: center;
     margin: 0;
     margin-top: -2px;
@@ -107,7 +107,7 @@ margin:0 auto;
 .power {
     text-align: center;
     font-weight: 800;
-    color: rgb(95, 95, 95);
+    color: rgb(131, 131, 131);
 }
 .google {
     font-weight: 800;
@@ -118,13 +118,12 @@ margin:0 auto;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 400;
 }
 .dashboard-header ul li {
     margin:5px 10px;
-    padding: 7px 10px;
-    background:rgb(0, 165, 74);
+    padding: 5px;
     cursor: pointer;
 }
 .account {
@@ -143,22 +142,24 @@ margin:0 auto;
     padding: 10px;
 }
 .account-dashboard-second {
-    background: black;
-    color: rgb(224, 224, 224);
-    font-weight: 500;
+    background: rgb(200, 234, 255);
+    color: black;
+    font-weight: 600;
     font-size: 16px;
     padding: 14px 10px;
+    margin-bottom: 15px;
 }
 .manager h2{
     font-size: 18px;
     font-weight: 600;
-    color: rgb(0, 0, 214);
+    color: rgb(0, 0, 0);
 }
 
 table {
     width: 100%;
-    background: rgb(145, 145, 145);
     margin: 5px 0;
+    border-collapse: separate;
+    border-spacing: 0 5px;
 }
 th,td {
     padding:13px 7px;
@@ -170,8 +171,10 @@ td {
 }
 th {
     font-size: 16px;
-    background:paleturquoise;
+    background:#003b65;
+    color: #eee;
 }
+
 .row1 td {
     background: silver;
 }
@@ -179,13 +182,17 @@ th {
     background: whitesmoke;
 }
 .spaced {
-    margin-top: 150px;
+    margin-top: 50px;
 }
 .credit td{
-    background: rgb(40, 116, 40);
+    background: none;
+    color:rgb(0, 177, 80);
+    font-weight: 600;
 }
 .debit td{
-    background: rgb(255, 92, 92);
+    background: whitesmoke;
+    color: rgb(255, 92, 92);
+    margin: 5px 0;
 }
 .blue {
     color: rgb(47, 117, 175);
@@ -255,7 +262,7 @@ footer {
     .login-section {
         max-width: 80%;
         min-height: 200px;
-        background: whitesmoke;
+        
         margin: 60px auto;
         /* text-align: center; */
         box-shadow: 0px 0px 10px grey;
@@ -266,6 +273,12 @@ footer {
     /* account */
     .account {
         overflow: scroll;
+    }
+    .account-dashboard {
+        background: white;
+        padding: 10px;
+        max-width: 1300px;
+        margin: 50px auto;
     }
     /* end account */
 
@@ -280,7 +293,7 @@ footer {
     }
     .icons i{
         margin-right: 15px;
-        color: green;
+       
         font-size: .9rem;
     }
     .dashboard-header ul {
@@ -295,7 +308,7 @@ footer {
     .dashboard-header ul li {
         margin:5px 10px;
         padding: 6px 10px;
-        background:rgb(0, 165, 74);
+        
         cursor: pointer;
     }
     th,td {
@@ -304,11 +317,11 @@ footer {
         font-weight: 600;
     }
     td {
-        font-size: 10px;
+        font-size: 12px;
     }
     th {
-        font-size: 10px;
-        background:paleturquoise;
+        font-size: 12px;
+        
     }
     /* end user dashboard */
 
