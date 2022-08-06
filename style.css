@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
 }
+
 body {
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
@@ -500,7 +501,9 @@ input[type=number] {
       #proceed-one {
         width: 100%;
       }
-
+      .proceed {
+        width: 100%;
+    }
 
 
 
