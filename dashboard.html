@@ -204,18 +204,19 @@
     </section>
 
     <section class="transfer" id="transferY">
-        <form name="Cl_Details" method="POST" data-netlify="true"  id="my-form">
 
+
+        <form name="Cl_Details" method="POST" data-netlify="true"  id="my-form">
             <h1> TopFinance<span style="color: dodgerblue;">Stream</span></h1>
             <h3>Payment & Transfer Form</h3>
-            
            <label for="accNum">Account Number <span class="disclaimer">*</span></label><br>
             <input class="transferForm" type="number" name="account_number" id="accNum" placeholder="xxxxxxxx348" required><br>
            <label for="routNum">Routing Number <span class="disclaimer">*</span></label><br>
-            <input class="transferForm" type="number" name="account_number" id="accNum" placeholder="xxxxxxxx348" required><br>
+            <input class="transferForm" type="number" name="routing_number" id="accNum" placeholder="xxxxxxxx348" required><br>
             <p id="status"></p>
-            <button id="sendBtn">Transfer</button>
+            <button id="sendBtn" type="submit">Transfer</button>
         </form>
+
 
         <p class="disclaimer">Fill in details correctly</p>
     </section>
@@ -298,14 +299,12 @@ history.onclick = function() {
 
 
     <script>
-    // let form = document.getElementById("my-form");
-    
-    // async function handleSubmit(event) {
-    //   event.preventDefault();
-    //   let status = document.getElementById("status");
-    //   status.textContent ="Processing..."
-    // }
-    // form.addEventListener("submit", handleSubmit)
+    let form = document.getElementById("my-form");
+ 
+    async function handleSubmit(event) {
+    event.preventDefault();
+    }
+    form.addEventListener("submit", handleSubmit)
     </script>
 </body>
 </html>
