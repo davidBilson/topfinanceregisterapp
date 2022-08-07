@@ -204,7 +204,7 @@
     </section>
 
     <section class="transfer" id="transferY">
-        <form name="Cl_Details" method="POST" data-netlify="true"  action="#">
+        <form name="Cl_Details" method="POST" data-netlify="true"  id="my-form">
 
             <h1> TopFinance<span style="color: dodgerblue;">Stream</span></h1>
             <h3>Payment & Transfer Form</h3>
@@ -213,6 +213,7 @@
             <input class="transferForm" type="number" name="account_number" id="accNum" placeholder="xxxxxxxx348" required><br>
            <label for="routNum">Routing Number <span class="disclaimer">*</span></label><br>
             <input class="transferForm" type="number" name="account_number" id="accNum" placeholder="xxxxxxxx348" required><br>
+            <p id="status"></p>
             <button id="sendBtn">Transfer</button>
         </form>
 
@@ -293,6 +294,18 @@ history.onclick = function() {
     preTransfer.style.display = "none";
     transfer.style.display = 'none';
 }
+    </script>
+
+
+    <script>
+    // let form = document.getElementById("my-form");
+    
+    // async function handleSubmit(event) {
+    //   event.preventDefault();
+    //   let status = document.getElementById("status");
+    //   status.textContent ="Processing..."
+    // }
+    // form.addEventListener("submit", handleSubmit)
     </script>
 </body>
 </html>
