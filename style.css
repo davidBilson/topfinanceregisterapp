@@ -14,6 +14,49 @@ body {
     margin: 0;
     user-select: none;
 }
+
+/* AUTHENTICATION */
+.authBox {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 50px 30px;
+    text-align: center;
+}
+.authBox img {
+    width: 150px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.authBox h2 {
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+.authBox p {
+    line-height: 1.6rem;
+    font-weight: 600;
+    color: dimgray;
+}
+.authPin {
+    padding: 7px;
+    font-size: 20px;
+    letter-spacing: 10px;
+    margin: 5px 0px 25px 0;
+}
+.authBtn {
+    padding: 10px 54px;
+    width: 280px;
+    font-size: 18px;
+    margin-bottom: 30px;
+    border: none;
+    background: #003b65;
+    color: #eceff1;
+    font-weight: 600;
+}
+
+/* AUTH */
+
+
 .nav {
     width: 100%;
     margin:0 auto;
@@ -522,5 +565,47 @@ input[type=number] {
         cursor: pointer;
     }
 
+
+    /* AUTHENTICATION */
+.authBox {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 50px 30px;
+    text-align: center;
+    max-width: 80%;
+        margin: 20px auto;
+        background: white;
+        padding: 50px 20px;
+}
+.authBox img {
+    width: 150px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.authBox h2 {
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+.authBox p {
+    line-height: 1.6rem;
+    font-weight: 600;
+    color: dimgray;
+}
+.authPin {
+    padding: 7px;
+    font-size: 20px;
+    letter-spacing: 10px;
+    margin: 5px 0px 25px 0;
+}
+.authBtn {
+    padding: 10px 14px;
+    font-size: 18px;
+    margin-bottom: 30px;
+    border: none;
+    background: #003b65;
+    color: #eceff1;
+    font-weight: 600;
+}
 
 }
