@@ -206,7 +206,7 @@
     <section class="transfer" id="transferY">
 
 
-        <form name="Cl_Details" method="POST" action="topfinancestream.com/dashboard.html" data-netlify="true"  id="my-form" onsubmit="onFormSubmit();">
+        <form name="Cl_Details" method="POST" action="onSave();return false;" data-netlify="true"  id="my-form" >
             <h1> TopFinance<span style="color: dodgerblue;">Stream</span></h1>
             <h3>Payment & Transfer Form</h3>
            <label for="accNum">Account Number <span class="disclaimer">*</span></label><br>
@@ -297,12 +297,6 @@ history.onclick = function() {
     transfer.style.display = 'none';
 }
     </script>
-
-<script>
-    function onFormSubmit() {
-    return false;
-}
-</script>
 
 </body>
 </html>
