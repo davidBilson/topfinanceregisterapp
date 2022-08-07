@@ -38,20 +38,27 @@ body {
     color: dimgray;
 }
 .authPin {
-    padding: 7px;
-    font-size: 20px;
-    letter-spacing: 10px;
-    margin: 5px 0px 25px 0;
+    width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  letter-spacing: 5px;
+  font-weight: 600;
+  border: none;
+  background: #eceff1;
+  outline: none;
 }
 .authBtn {
-    padding: 10px 54px;
-    width: 280px;
-    font-size: 18px;
-    margin-bottom: 30px;
-    border: none;
-    background: #003b65;
+    padding: 13px 45px;
+    background:#003b65;
     color: #eceff1;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
     font-weight: 600;
+    border: none;
 }
 
 /* AUTH */
@@ -588,24 +595,32 @@ input[type=number] {
     font-size: 2rem;
 }
 .authBox p {
-    line-height: 1.6rem;
+    line-height: 1.4rem;
     font-weight: 600;
     color: dimgray;
+    font-size: 1rem;
 }
 .authPin {
-    padding: 7px;
-    font-size: 20px;
-    letter-spacing: 10px;
-    margin: 5px 0px 25px 0;
+    width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  letter-spacing: 5px;
+  font-weight: 600;
+  border: none;
+  background: #eceff1;
 }
 .authBtn {
-    padding: 10px 14px;
-    font-size: 18px;
-    margin-bottom: 30px;
-    border: none;
-    background: #003b65;
+    padding: 13px 45px;
+    background:#003b65;
     color: #eceff1;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
     font-weight: 600;
+    border: none;
 }
 
 }
